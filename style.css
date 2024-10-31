@@ -1,11 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(to bottom right, #99cdd8, #f3c3b2);
+  font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,4 +17,59 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  position: relative;
+}
+
+h1 {
+  font-family: "Oxygen", sans-serif;
+  font-size: 28px;
+  color: #2d4354;
+  position: absolute;
+  top: 120px;
+}
+
+input {
+  border: 1px solid #2d4354;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(45, 67, 84, 0.4);
+  color: #2d4354;
+  font-family: inherit;
+  font-size: 22px;
+  width: 70%;
+  outline: none;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+}
+
+input:focus {
+  border: 1px solid #e57734;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2d4354;
+  border: 1px solid #2d4354;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(45, 67, 84, 0.4);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  outline: none;
+  transition: all 0.2s ease-out;
+}
+
+.btn:hover {
+  color: #e57734;
+  box-shadow: 0px 3px 4px rgba(45, 67, 84, 0.4);
+  transform: translateY(-1px) scale(1.02);
+}
+
+.btn:focus,
+.btn:active {
+  color: #e57734;
+  transform: translateY(1px);
+  box-shadow: 0px 2px 2px rgba(45, 67, 84, 0.4);
 }
