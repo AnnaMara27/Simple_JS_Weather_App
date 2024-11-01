@@ -62,11 +62,9 @@ h1 {
 }
 
 input {
-  background-color: #fef9ef;
   border: 1px solid #2d4354;
   border-radius: 5px;
   box-shadow: 0px 2px 2px rgba(45, 67, 84, 0.4);
-  color: #2d4354;
   font-family: inherit;
   font-size: 22px;
   outline: none;
@@ -109,7 +107,7 @@ input:focus {
 }
 
 .results-container {
-  background-color: #fef9ef;
+  background-color: #e7f0fe;
   border: 1px solid #2d4354;
   box-shadow: 0px 2px 2px rgba(45, 67, 84, 0.4);
   border-radius: 12px;

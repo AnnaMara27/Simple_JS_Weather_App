@@ -36,16 +36,22 @@ function displayWeather(data) {
 }
 
 searchBtn.addEventListener("click", () => {
-  const city = cityInput.value;
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      displayWeather(data);
-    })
-    .catch((error) => {
-      console.error("Error fetching weather data:", error);
-    });
+  const city = cityInput.value.trim();
+  // Prevent the default button action
+  if (city === "") {
+    alert("Please enter a city name");
+    event.preventDefault();
+  } else {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        displayWeather(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching weather data:", error);
+      });
+  }
 });
 
 displayTime();
